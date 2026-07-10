@@ -1,0 +1,287 @@
+/* ============================================
+  MENU / NAVEGACIÓN PRINCIPAL
+  ============================================
+  - Navbar fijo con blur
+  - Dropdown de temas desde arriba
+  - Selector de fuentes
+  - Menú móvil
+*/
+
+/* ---- Navbar ---- */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: color-mix(in srgb, var(--background) 80%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid transparent;
+  transition: all var(--transition);
+}
+.navbar-scrolled {
+  border-bottom-color: var(--border);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.06);
+}
+
+.navbar-inner {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ---- Logo ---- */
+.navbar-logo {
+  font-family: var(--heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+.navbar-logo-accent {
+  color: var(--primary);
+}
+.navbar-logo:hover {
+  color: var(--text);
+}
+
+/* ---- Enlaces de navegación ---- */
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.navbar-link {
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all var(--transition);
+}
+.navbar-link:hover {
+  color: var(--text);
+  background: var(--surface);
+}
+
+/* ---- Acciones (botones) ---- */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.navbar-action-btn {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  transition: all var(--transition);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.navbar-action-btn:hover,
+.navbar-action-btn.active {
+  color: var(--text);
+  background: var(--surface);
+}
+
+.navbar-lang-btn {
+  width: auto;
+  padding: 0 10px;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+.navbar-cv-btn {
+  color: var(--primary);
+}
+.navbar-cv-btn:hover {
+  background: color-mix(in srgb, var(--primary) 10%, transparent);
+  color: var(--primary);
+}
+
+/* ---- Hamburguesa ---- */
+.navbar-hamburger {
+  display: none;
+  width: 36px;
+  height: 36px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.navbar-hamburger span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 1px;
+  transition: all 0.3s ease;
+}
+.navbar-hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(4px, 4px);
+}
+.navbar-hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.navbar-hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(4px, -4px);
+}
+
+/* ---- Dropdown de Selector de Fuente ---- */
+.font-selector-dropdown {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, opacity 0.25s ease;
+  opacity: 0;
+  background: var(--background);
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+.font-selector-dropdown.open {
+  max-height: 320px;
+  opacity: 1;
+  overflow-y: auto;
+}
+
+.font-selector-header {
+  padding: 12px 24px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-secondary);
+}
+
+.font-selector-list {
+  display: flex;
+  flex-direction: column;
+  padding: 0 24px 12px;
+  gap: 2px;
+}
+
+.font-selector-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  transition: background var(--transition);
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text);
+}
+.font-selector-item:hover {
+  background: var(--surface);
+}
+.font-selector-item.active {
+  background: color-mix(in srgb, var(--primary) 8%, transparent);
+  color: var(--primary);
+}
+
+.font-selector-name {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.font-selector-category {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  font-family: var(--sans);
+}
+
+/* ---- Panel deslizante de temas (desde arriba) ---- */
+.theme-slide-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+  opacity: 0;
+  background: var(--background);
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+.theme-slide-panel.open {
+  max-height: 500px;
+  opacity: 1;
+}
+
+/* ---- Menú móvil ---- */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 64px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: color-mix(in srgb, var(--background) 98%, transparent);
+  backdrop-filter: blur(16px);
+  z-index: 999;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.mobile-menu.open {
+  opacity: 1;
+  pointer-events: all;
+}
+.mobile-menu-link {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text);
+  padding: 12px 24px;
+  border-radius: var(--radius-sm);
+  transition: background var(--transition);
+}
+.mobile-menu-link:hover {
+  background: var(--surface);
+}
+
+/* ---- Overflow (se activa cuando los links no caben) ---- */
+.navbar-overflow .navbar-links {
+  display: none;
+}
+.navbar-overflow .navbar-hamburger {
+  display: flex;
+}
+.navbar-overflow + .mobile-menu {
+  display: flex;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 810px) {
+  .navbar-links {
+    display: none;
+  }
+  .navbar-hamburger {
+    display: flex;
+  }
+  .mobile-menu {
+    display: flex;
+  }
+}
+@media (max-width: 480px) {
+  .navbar-link {
+    display: none;
+  }
+}

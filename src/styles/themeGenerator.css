@@ -1,0 +1,135 @@
+/* ============================================
+   GENERADOR DE TEMAS
+   ============================================
+   - Chips de sugerencias aleatorias
+   - Botón "Aleatorizar" para cambiar sugerencias
+   - Vista previa de la paleta generada
+   ============================================ */
+
+/* ---- Contenedor principal ---- */
+.theme-generator {
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+.theme-gen-content {
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+}
+
+.theme-gen-input-area {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ---- Sugerencias (chips cliqueables) ---- */
+.theme-gen-suggestions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.theme-gen-suggestions-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.theme-gen-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.theme-gen-chip {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  background: transparent;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.theme-gen-chip:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: color-mix(in srgb, var(--primary) 5%, transparent);
+}
+
+/* ---- Botón Aleatorizar ---- */
+.theme-gen-shuffle {
+  align-self: center;
+  padding: 8px 24px;
+  font-size: 0.88rem;
+}
+
+/* ---- Mensaje de error ---- */
+.theme-gen-error {
+  color: var(--danger);
+  font-size: 0.88rem;
+  text-align: center;
+}
+
+/* ---- Vista previa del tema ---- */
+.theme-gen-preview {
+  width: 100%;
+  max-width: 600px;
+  animation: fadeInUp 0.4s ease;
+}
+
+.theme-gen-preview h4 {
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+  color: var(--text-secondary);
+}
+
+/* Cuadrícula de colores */
+.theme-gen-palette {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.theme-gen-color {
+  aspect-ratio: 1;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: flex-end;
+  padding: 8px;
+  border: 1px solid var(--border);
+  transition: transform var(--transition);
+}
+
+.theme-gen-color:hover {
+  transform: scale(1.05);
+}
+
+.theme-gen-color-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Indicador del motor usado (Vocabulario / Template) */
+.theme-gen-engine {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  text-align: center;
+  margin-bottom: 12px;
+  opacity: 0.7;
+}
+
+.theme-gen-engine::before {
+  content: "⚙ ";
+}

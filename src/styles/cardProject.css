@@ -1,0 +1,154 @@
+/* ============================================
+   CARDPROJECT / TARJETA DE PROYECTO
+   ============================================
+   - Imagen con overlay
+   - Badges de estado/categoría
+   - Stack tecnológico
+   - Enlaces
+*/
+
+.project-card {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  transition: all var(--transition);
+  animation: fadeInUp 0.4s ease both;
+}
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+  border-color: transparent;
+}
+
+/* ---- Imagen ---- */
+.project-card-image {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--background-secondary);
+}
+.project-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.project-card:hover .project-card-image img {
+  transform: scale(1.05);
+}
+
+.project-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity var(--transition);
+  display: flex;
+  align-items: flex-end;
+  padding: 16px;
+}
+.project-card:hover .project-card-overlay {
+  opacity: 1;
+}
+
+/* ---- Badges ---- */
+.project-card-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.project-badge {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+.status-completed {
+  background: color-mix(in srgb, var(--success) 20%, transparent);
+  color: var(--success);
+}
+.status-dev {
+  background: color-mix(in srgb, var(--warning) 20%, transparent);
+  color: var(--warning);
+}
+.status-planned {
+  background: color-mix(in srgb, var(--text-secondary) 20%, transparent);
+  color: var(--text-secondary);
+}
+.badge-category {
+  background: color-mix(in srgb, var(--primary) 20%, transparent);
+  color: var(--primary);
+}
+.badge-ai {
+  background: color-mix(in srgb, #a855f7 20%, transparent);
+  color: #a855f7;
+}
+
+/* ---- Body ---- */
+.project-card-body {
+  padding: 20px;
+}
+
+.project-card-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.project-card-description {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 16px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ---- Stack ---- */
+.project-card-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+.project-tech {
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 12px;
+  background: var(--background);
+  color: var(--text-secondary);
+}
+
+/* ---- Links ---- */
+.project-card-links {
+  display: flex;
+  gap: 12px;
+}
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--primary);
+  transition: all var(--transition);
+}
+.project-link:hover {
+  color: var(--primary-hover);
+  gap: 8px;
+}
+.project-link-disabled {
+  color: var(--text-secondary);
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.project-link-disabled:hover {
+  color: var(--text-secondary);
+  gap: 6px;
+}

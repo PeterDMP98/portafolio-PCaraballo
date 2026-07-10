@@ -1,0 +1,118 @@
+/* ============================================
+   SKILLS / HABILIDADES TÉCNICAS
+   ============================================
+   - Categorías de habilidades
+   - Tarjetas de tecnología con iconos
+*/
+
+.skills {
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+.skills-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  padding: 0 24px;
+}
+
+.skill-category {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  transition: all var(--transition);
+}
+.skill-category:hover {
+  background: var(--surface-hover);
+  transform: translateY(-2px);
+}
+
+.skill-category-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.skill-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  gap: 12px;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 8px;
+  border-radius: var(--radius-sm);
+  background: var(--background);
+  transition: all var(--transition);
+}
+.skill-item:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+
+.skill-icon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.skill-icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.skill-icon-fallback {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+.skill-name {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .skills-content {
+    grid-template-columns: 1fr;
+  }
+  .skill-items {
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-content {
+    padding: 0 16px;
+    gap: 20px;
+  }
+  .skill-category {
+    padding: 16px;
+  }
+  .skill-items {
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+    gap: 8px;
+  }
+  .skill-item {
+    padding: 8px 4px;
+  }
+}
