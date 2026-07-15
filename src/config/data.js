@@ -272,6 +272,76 @@ const allProjects = [
     isAI: true,
     featured: false,
   },
+  {
+    id: "job-finder",
+    name: "Sistema Web de Búsqueda de Empleo",
+    description:
+      "Plataforma web diseñada para conectar empresas y candidatos mediante un sistema de publicación de vacantes, postulaciones, filtros inteligentes, perfiles profesionales y administración de usuarios con diferentes niveles de acceso.",
+    description_en:
+      "Web platform connecting companies and job seekers through job postings, applications, advanced filters, professional profiles, and role-based administration.",
+    stack: [
+      "React",
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "JWT",
+    ],
+    image: "https://placehold.co/600x400?text=Job+Platform",
+    link: "https://job-platform-demo.vercel.app",
+    github: "",
+    status: "planning",
+    category: "web",
+    type: "fullstack",
+    isAI: false,
+    featured: false,
+  },
+
+  {
+    id: "audit-system",
+    name: "Sistema de Auditoría Contable",
+    description:
+      "Sistema web orientado a la gestión de auditorías contables, control documental, seguimiento de hallazgos, generación de informes y administración de usuarios mediante una arquitectura escalable y segura.",
+    description_en:
+      "Accounting audit management platform featuring document control, findings tracking, report generation, and secure role-based user management.",
+    stack: [
+      "React",
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+    ],
+    image: "https://placehold.co/600x400?text=Audit+System",
+    link: "https://audit-demo.vercel.app",
+    github: "",
+    status: "planning",
+    category: "web",
+    type: "fullstack",
+    isAI: false,
+    featured: false,
+  },
+  {
+  id: "mi-iasd-app",
+  name: "mi-IASD-app",
+  description:
+    "Plataforma integral para la gestión de información de la Iglesia Adventista del Séptimo Día. Centraliza la administración de miembros, departamentos, ministerios, asistencia, eventos, tesorería, inventario, comunicaciones y reportes, facilitando la organización y el seguimiento de las actividades de la iglesia.",
+  description_en:
+    "Comprehensive information management platform for the Seventh-day Adventist Church. It centralizes member management, departments, ministries, attendance, events, treasury, inventory, communications, and reporting to streamline church administration.",
+  stack: [
+    "React",
+    "Tailwind CSS",
+    "Node.js",
+    "Express",
+    "PostgreSQL",
+    "JWT",
+  ],
+  image: "https://placehold.co/600x400?text=mi-IASD-app",
+  link: "https://mi-iasd-app-demo.vercel.app",
+  github: "",
+  status: "planning",
+  category: "web",
+  type: "fullstack",
+  isAI: false,
+  featured: true,
+},
 ];
 
 /* ---- Función helper para obtener lenguajes únicos de todos los proyectos ---- */
