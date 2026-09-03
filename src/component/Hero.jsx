@@ -9,6 +9,7 @@
 import { useEffect, useState, useRef, useMemo } from "react";
 import { useLanguage } from "../hooks/useLanguage";
 import { myInfo } from "../config/data";
+import perfil from "../assets/perfil.jpeg";
 import "../styles/hero.css";
 
 function Hero() {
@@ -141,6 +142,9 @@ function Hero() {
 
       <div className="hero-visual">
         <div className="hero-shape" />
+        <div className="hero-photo">
+          <img src={perfil} alt={info.name} loading="lazy" />
+        </div>
       </div>
     </section>
   );

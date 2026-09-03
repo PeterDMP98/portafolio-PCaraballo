@@ -62,6 +62,13 @@ const translations = {
     "projects.empty": "No se encontraron proyectos con esos filtros.",
     "projects.demo": "Demo",
     "projects.code": "Código",
+    "projects.download": "Descargar",
+    "projects.features": "Funciones",
+    "projects.updates": "Actualizaciones",
+    "projects.viewDetails": "Ver más",
+    "projects.prevImage": "Imagen anterior",
+    "projects.nextImage": "Imagen siguiente",
+    "projects.expandImage": "Ampliar imagen",
     "projects.addLinks": "Agregar enlaces próximamente",
 
     /* ---- CONTACT ---- */
@@ -174,6 +181,13 @@ const translations = {
     "projects.empty": "No projects found with those filters.",
     "projects.demo": "Demo",
     "projects.code": "Code",
+    "projects.download": "Download",
+    "projects.features": "Features",
+    "projects.updates": "Updates",
+    "projects.viewDetails": "View more",
+    "projects.prevImage": "Previous image",
+    "projects.nextImage": "Next image",
+    "projects.expandImage": "Expand image",
     "projects.addLinks": "Links coming soon",
 
     /* ---- CONTACT ---- */

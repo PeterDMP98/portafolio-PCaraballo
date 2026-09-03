@@ -6,6 +6,12 @@
   - allProjects: Todos los proyectos con filtros
 */
 
+import fullTechnologyImg1 from "../assets/proyect-img/Full-Technology/full-technology-1.png";
+import fullTechnologyImg2 from "../assets/proyect-img/Full-Technology/full-technology-2.png";
+import fullTechnologyImg3 from "../assets/proyect-img/Full-Technology/full-technology-3.png";
+import fullTechnologyImg4 from "../assets/proyect-img/Full-Technology/full-technology-4.png";
+import fullTechnologyImg5 from "../assets/proyect-img/Full-Technology/full-technology-5.png";
+
 const myInfo = [
   {
     name: "Pedro Luis Caraballo Banquez",
@@ -76,6 +82,92 @@ const myProjects = [
     github: "",
     status: "completed",
     category: "web",
+    type: "app",
+    isAI: false,
+    featured: true,
+  },
+  {
+    id: "full-technology",
+    name: "Full-Technology",
+    description:
+      "Aplicación de escritorio para la gestión de un negocio de reparación de equipos y venta de accesorios. Centraliza el registro de órdenes de servicio, clientes, inventario, punto de venta, gestión contable e historial de ventas, todo en una sola ventana tipo Excel con moneda configurable.",
+    description_en:
+      "Desktop application for managing an equipment repair and accessories sales business. It centralizes service orders, clients, inventory, point of sale, accounting management and sales history, all in a single Excel-style window with configurable currency.",
+    stack: ["C#", ".NET 10", "WinForms", "SQLite"],
+    image: fullTechnologyImg1,
+    images: [
+      fullTechnologyImg1,
+      fullTechnologyImg2,
+      fullTechnologyImg3,
+      fullTechnologyImg4,
+      fullTechnologyImg5,
+    ],
+    version: "2.2.0",
+    features: [
+      "Mantenimiento de equipos en una sola ventana (cliente, dispositivo, diagnóstico, costo/entrega)",
+      "Cobro de pendientes con abonos, historial de pagos y opción de entrega",
+      "Clientes compradores y proveedores con documento/celular únicos",
+      "Inventario de repuestos y accesorios con control de stock",
+      "Punto de venta de accesorios con carrito, descuentos y medios de pago",
+      "Gestión contable con cierre del día y balances con gráficas",
+      "Historial de ventas consultable por fechas, medio de pago y búsqueda",
+      "Moneda configurable (COP por defecto, USD, EUR)",
+    ],
+    features_en: [
+      "Equipment maintenance in a single window (client, device, diagnosis, cost/delivery)",
+      "Pending payments with installments, payment history and delivery option",
+      "Buyer and supplier clients with unique ID/phone",
+      "Spare parts and accessories inventory with stock control",
+      "Point of sale for accessories with cart, discounts and payment methods",
+      "Accounting management with daily close and balance charts",
+      "Queryable sales history by date, payment method and search",
+      "Configurable currency (COP by default, USD, EUR)",
+    ],
+    updates: [
+      {
+        version: "2.2.0",
+        date: "2026",
+        label_es: "Actualización de gestión contable, clientes, venta y mantenimiento",
+        label_en: "Accounting management, clients, sales and maintenance update",
+        changes_es: [
+          "Gestión contable: cierre del día desde una fecha hacia adelante y descarga del cierre en PDF",
+          "Corrección del registro de clientes: solo se exige documento o celular (no ambos)",
+          "Venta: corregido el layout del carrito y se agregó opción para volver a mostrar el carrito oculto",
+          "Mantenimiento: botón Ver con historial de pagos y botón Editar solo de diagnóstico y reparación",
+          "Columna 'Opciones' con los botones en las listas de mantenimiento",
+        ],
+        changes_en: [
+          "Accounting: daily close from a date forward and PDF download of the close",
+          "Client registration fix: only ID or phone is required (not both)",
+          "Sales: fixed cart layout and added option to show a hidden cart again",
+          "Maintenance: View button with payment history and Edit button only for diagnosis and repair",
+          "'Options' column with buttons in the maintenance lists",
+        ],
+      },
+      {
+        version: "2.0.0",
+        date: "2025",
+        label_es: "Rediseño a una sola ventana y nuevos módulos",
+        label_en: "Single-window redesign and new modules",
+        changes_es: [
+          "Ventana principal tipo Excel con barra superior contextual y navegación inferior de módulos",
+          "Módulos de Clientes, Inventario, Venta, Gestión Contable e Historial de venta",
+          "Moneda configurable desde el menú de Configuración",
+          "Migración automática que preserva los datos de versiones anteriores",
+        ],
+        changes_en: [
+          "Excel-style main window with contextual top bar and bottom module navigation",
+          "Clients, Inventory, Sales, Accounting Management and Sales History modules",
+          "Configurable currency from the Settings menu",
+          "Automatic migration that preserves data from previous versions",
+        ],
+      },
+    ],
+    download: "https://drive.google.com/uc?export=download&id=1NUPjG3UUZYFXu8EKOviodpS-fDm_gt8_",
+    link: "",
+    github: "",
+    status: "completed",
+    category: "desktop",
     type: "app",
     isAI: false,
     featured: true,
